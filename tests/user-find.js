@@ -16,7 +16,7 @@ var should = chai.should();
 chai.use(chaiHttp);
 //Our parent block
 describe("Users", function(){
-	var userId;
+	var userId="";
 
 	before(function(done){
 		var user = {
@@ -50,6 +50,13 @@ describe("Users", function(){
 					should.exist(res.body);
 					res.should.have.status(200);
 					res.body.should.be.a("object");
+					res.body.should.have.property("fName");
+					res.body.should.have.property("lName");
+					res.body.should.have.property("email");
+					res.body.should.have.property("pinCode");
+					res.body.should.have.property("birthDate");
+					res.body.should.have.property("isActive");
+					res.body.should.have.property("_id").eql(userId.toString());
 					done();
 				});
 		});
