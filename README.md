@@ -1,6 +1,10 @@
 # Node Tutorial
 
 A simple node.js tutorial for create , read & update user using express & mongoDB.Express is used for creating simple http server , while mongoDB is used for storing data.
+We have used express-validation package to validate each & every request i.e. route.
+Joi - Object schema description language and validator for JavaScript objects.
+Moment to convert date object i.e. specifically used to avoid timezone difference.
+Mocha , chai & chai-http  for testing purpose.
 
 ## Getting Started
 
@@ -28,8 +32,6 @@ Now edit this .env file & set all the fields required. Then to start our applica
 ```
 npm run start
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
