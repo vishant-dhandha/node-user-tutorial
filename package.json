@@ -1,0 +1,38 @@
+{
+  "name": "node-user",
+  "version": "1.0.0",
+  "description": "A simple node API to create, update and fetch user details.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "./node_modules/.bin/eslint . --fix",
+    "test": "node ./node_modules/mocha/bin/mocha tests/",
+    "build":"npm run test && npm run lint",
+    "git-commit": "git add -A . && git commit ",
+    "git-push": "git checkout master && git push origin master --force",
+    "deploy": "npm run git-commit && npm run git-push"
+  },
+  "keywords": [
+    "node",
+    "user",
+    "API"
+  ],
+  "author": "vishant.dhandha@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "express-validation": "^1.0.2",
+    "joi": "^10.6.0",
+    "method-override": "^2.3.9",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.10"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "eslint": "^4.6.1",
+    "mocha": "^3.5.1"
+  }
+}
